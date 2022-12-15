@@ -18,4 +18,24 @@ return res.send(e)
 }
 })
 
+app.post("/", async (req, res) => {
+
+    let data=req.body
+
+    
+
+try{
+
+let bookmark=await BooknarkModel.create(data)
+return res.send(bookmark)
+
+}catch(e){
+ 
+return res.send(e)
+
+}
+})
+
+
+
 module.exports=app
