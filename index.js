@@ -14,8 +14,8 @@ mongoose.set("strictQuery", false);
 app.get('/',(req,res)=>{res.send('hello')})
  
 // mongodb+srv://skismile:7867@cluster0.hs4mwc2.mongodb.net/test
-mongoose.connect("mongodb://127.0.0.1:27017/murgi",()=>{
-app.listen(8080,()=>{console.log('server is runing on port 8080')})
+mongoose.connect(MONGO_URL,()=>{
+app.listen(PORT,()=>{console.log('server is runing on port 8080')})
 })
 
   
