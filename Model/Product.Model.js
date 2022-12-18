@@ -8,10 +8,10 @@ const productSchema = new Schema({
 
   Date: {
     type: Date,
-    default: new Date(),
+    default: new Date().toLocaleDateString(),
   },
 });
-
+   
 const ProductModel = model("product", productSchema);
 
 module.exports = ProductModel;
